@@ -17,20 +17,17 @@ class _MyApp_fState extends State<MyApp_f> {
   final passwordController = TextEditingController();
 
 
-  //final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-
   final google = GoogleSignIn();
   GoogleSignInAccount? google_user;
 
   @override
   Widget build(BuildContext context) {
-    //User? user = FirebaseAuth.instance.currentUser;
     double width = MediaQuery. of(context). size. width ;
     double height = MediaQuery. of(context). size. height;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: const Text('User Authentication Firebase',)),
+          title: const Center(child: Text('User Authentication Firebase',)),
           //title: Text('Auth User(Logged '+(user == null ? 'out':'in')+')'),
         ),
         body: SingleChildScrollView(
@@ -51,8 +48,7 @@ class _MyApp_fState extends State<MyApp_f> {
                 child: TextField(
                   controller: emailController,
                   decoration: InputDecoration(
-
-                    hintStyle: TextStyle(fontSize: 12),
+                    hintStyle: const TextStyle(fontSize: 12),
                     hintText: 'Enter your email please',
                     focusedBorder:OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.deepOrange, width: 2.0),
@@ -62,7 +58,7 @@ class _MyApp_fState extends State<MyApp_f> {
                       borderSide: const BorderSide(color: Colors.orange, width: 2.0),
                       borderRadius: BorderRadius.circular(25.0),
                     ),
-                    icon: IconButton(onPressed: () {  }, icon: Icon(Icons.email),
+                    icon: IconButton(onPressed: () {  }, icon: const Icon(Icons.email),
 
                     )
                   ),
@@ -76,7 +72,7 @@ class _MyApp_fState extends State<MyApp_f> {
                   controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
-                      hintStyle: TextStyle(fontSize: 12),
+                      hintStyle: const TextStyle(fontSize: 12),
                       hintText: 'Enter your password please',
                       focusedBorder:OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.deepOrange, width: 2.0),
@@ -86,7 +82,7 @@ class _MyApp_fState extends State<MyApp_f> {
                         borderSide: const BorderSide(color: Colors.orange, width: 2.0),
                         borderRadius: BorderRadius.circular(25.0),
                       ),
-                      icon: IconButton(onPressed: () {  }, icon: Icon(Icons.password),
+                      icon: IconButton(onPressed: () {  }, icon: const Icon(Icons.password),
 
                       )
                   ),
@@ -148,14 +144,14 @@ class _MyApp_fState extends State<MyApp_f> {
                     },
                   ),
 
-                  SizedBox(height: 40,),
+                  const SizedBox(height: 40,),
                 ],
               ),
-              SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               ElevatedButton(
-                child: Text('Signin with google'),
+                child: const Text('Signin with google'),
                 onPressed: () async{
                   try{
                     google.signOut();
