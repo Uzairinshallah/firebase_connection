@@ -134,7 +134,8 @@ class _loggedinState extends State<loggedin> {
                           // print(userId);
 
 
-                        // await users.doc(userId).set({
+
+
                         await users.add({
 
                           'f_name': fName.text,

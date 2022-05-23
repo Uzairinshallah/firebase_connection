@@ -78,26 +78,13 @@ class _LoadDataFromFirestoreState extends State<LoadDataFromFirestore> {
                                  margin: EdgeInsets.all(3),
 
                                  child: ListTile(
-                                 // leading: const Icon(Icons.supervisor_account_outlined ),
-              // (imageURL!=null)
-              //
-              // ? Image.network(imageURL!)
-              //     :
-              // Placeholder(fallbackHeight: 100.0,fallbackWidth: double.infinity,),
-
-                                     // leading: CircleAvatar(
-                                     //   backgroundColor: Colors.white,
-                                     //   backgroundImage: (model.imageURL!=null)?
-                                     //   NetworkImage( model.imageURL.toString())
-                                     //   :
-                                     //   const NetworkImage('https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249__340.png'),
-                                     // ),
+                                 
                                    leading: (model.imageURL!=null)?
                                      CircleAvatar(
                                        backgroundImage: NetworkImage(model.imageURL.toString() ),
                                      )
                                      :
-                                      CircleAvatar(
+                                      const CircleAvatar(
                                         backgroundImage: NetworkImage('https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249__340.png'),
                                        ),
 
